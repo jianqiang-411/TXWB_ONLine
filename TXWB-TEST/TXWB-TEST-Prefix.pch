@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'TXWB-TEST' target in the 'TXWB-TEST' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "PullingRefreshTableView.h"
+
+
+#import "HttpRequestModel.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#endif
+
+
+#define TX_GET_USERINFO     @"https://open.t.qq.com/api/user/info"
