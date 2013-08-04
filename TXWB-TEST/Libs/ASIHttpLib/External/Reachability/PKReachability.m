@@ -170,7 +170,7 @@ static void logNetworkStatus_(const char *name, int line, NetworkStatus status) 
 			statusString = [NSString stringWithFormat: @"Reachable via WiFi"];
 			break;
 	}
-	
+	NSLog(@"%@",statusString);
 //	TWLog(@"%s (%d) \n\tNetwork Status: %@", name, line, statusString);
 	
 } // logNetworkStatus_()

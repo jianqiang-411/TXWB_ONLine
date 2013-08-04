@@ -24,7 +24,7 @@
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:twoVC];
 
     ThreeVC *threeVC = [[ThreeVC alloc] init];
-    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:threeVC];
+    //UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:threeVC];
 
     FourVC *fourVC = [[FourVC alloc] init];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourVC];
@@ -33,7 +33,7 @@
     
     //[_tabBarController.tabBar setTintColor:[UIColor colorWithRed:100/255.0 green:200/255.0 blue:1 alpha:0.8]];
     
-    NSArray *arrControllers = [[NSArray alloc] initWithObjects:nav1,nav2,nav3,nav4, nil];
+    NSArray *arrControllers = [[NSArray alloc] initWithObjects:nav1,nav2,threeVC,nav4, nil];
     
     _tabBarController.viewControllers = arrControllers;
     
@@ -49,7 +49,7 @@
     OauthVC *oauthVC = [[OauthVC alloc] init];
     self.window.rootViewController = oauthVC;
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -14,9 +14,8 @@
     #import "PullingRefreshTableView.h"
 
 
-#import "HttpRequestModel.h"
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
+
+
 #endif
 
 

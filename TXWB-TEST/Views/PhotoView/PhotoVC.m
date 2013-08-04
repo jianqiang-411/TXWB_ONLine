@@ -112,58 +112,9 @@
     _imgvw.image = _imgToShow;
     
     
-    /*
-    NSString *strPicNamePNG = [_picUrl stringByAppendingString:@".png"];
-    NSString *strPicNameJPEG = [_picUrl stringByAppendingString:@".jpeg"];
-    
-    if ([_fm fileExistsAtPath:[self pictureFilePath:strPicNamePNG]] ) {
-        
-        NSLog(@"ee");
-        _imgvw.image = [UIImage imageWithContentsOfFile:[self pictureFilePath:strPicNamePNG]];
-        
-    } else {
-        if ([_fm fileExistsAtPath:[self pictureFilePath:strPicNameJPEG]]) {
-            _imgvw.image = [UIImage imageWithContentsOfFile:[self pictureFilePath:strPicNameJPEG]];
-        } else {
-            
-            NSLog(@"noee");
-            
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/460",_picUrl]]];
-            
-            UIImage *img = [UIImage imageWithData:data];
-            _imgvw.image = img;
-            if (UIImagePNGRepresentation(img) == nil) {
-                
-                data = UIImageJPEGRepresentation(img, 1.0f);
-                
-                if ([_fm createFileAtPath:[self pictureFilePath:[NSString stringWithFormat:@"%d.jpeg",11]] contents:UIImageJPEGRepresentation(img, 1.0f) attributes:nil]) {
-                    NSLog(@"ss");
-                } else {
-                    NSLog(@"ff");
-                }
-                
-            } else {
-                data = UIImagePNGRepresentation(img);
-                if ([_fm createFileAtPath:[self pictureFilePath:[NSString stringWithFormat:@"%d.png",22]] contents:UIImageJPEGRepresentation(img, 1.0f) attributes:nil]) {
-                    NSLog(@"ss");
-                } else {
-                    NSLog(@"ff");
-                }
-            }
-        }
-    }
-    */
 }
 
-/*
-- (NSString *)pictureFilePath:(NSString *)picName
-{
-    
-    NSString *cachesPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:picName];
 
-    return  cachesPath;
-}
-*/
 - (void)handelSingelTapGesture:(UIGestureRecognizer *)gesture
 {
     
@@ -194,9 +145,8 @@
 
 - (void)dismissSelf
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    [window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 - (void)viewWillAppear:(BOOL)animated

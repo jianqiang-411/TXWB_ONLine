@@ -8,6 +8,7 @@
 
 #import "OauthVC.h"
 #import "Define.h"
+#import "HttpRequestModel.h"
 @interface OauthVC () <UIWebViewDelegate>
 @property (strong, nonatomic) UIWebView *oauthWebView;
 @end
@@ -37,6 +38,7 @@
     [_oauthWebView loadRequest:request];
     
 }
+
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
@@ -67,7 +69,7 @@
         
         NSArray *arrrefresh_token = [[arrCode objectAtIndex:5] componentsSeparatedByString:@"&"];
         strRefresh_token = [arrrefresh_token objectAtIndex:0];
-        NSLog(@"strRefresh_token==%@",strRefresh_token);
+        //NSLog(@"strRefresh_token==%@",strRefresh_token);
         //openkey=DF873F76AB2CFFEDC590E7FD100F5F64
         //name baojianqia5572
         strClient_ip = [[[arrCode objectAtIndex:7] componentsSeparatedByString:@"&"]objectAtIndex:0];
